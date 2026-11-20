@@ -1,0 +1,244 @@
+/* =========================================================
+   Página de inicio · Repositorio DIW
+   Basada en el estilo responsive de c2
+   ========================================================= */
+
+/* ---------- 1. Variables y base ---------- */
+:root {
+    --fondo: #f6f7f9;
+    --superficie: #ffffff;
+    --tinta: #111827;
+    --texto-suave: #6b7280;
+    --linea: #e5e7eb;
+    --acento: #2563eb;
+    --acento-suave: #eff6ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--fondo);
+    color: var(--tinta);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* ---------- 2. Header con Flexbox adaptable ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px 24px;
+    padding: 16px clamp(20px, 4vw, 48px);
+    background-color: var(--superficie);
+    border-bottom: 1px solid var(--linea);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--tinta);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--acento);
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(14px, 2.5vw, 26px);
+}
+
+.site-nav a {
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--tinta);
+}
+
+.site-nav a.is-active {
+    color: var(--acento);
+    font-weight: 600;
+}
+
+/* ---------- 3. Página ---------- */
+.page {
+    flex: 1;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(28px, 4vw, 40px) clamp(20px, 4vw, 40px) 72px;
+}
+
+.page-head {
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    margin: 0 0 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--acento);
+}
+
+.page-head h1 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.lead {
+    margin: 8px 0 0;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ---------- 4. Tarjetas de ejercicios ---------- */
+.exercises {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(16px, 2vw, 24px);
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: min(270px, 100%);
+    overflow: hidden;
+    background-color: var(--superficie);
+    border: 1px solid var(--linea);
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(17, 24, 39, 0.09);
+}
+
+.card-media {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #eef2f7, #dfe6ef);
+}
+
+.card-media span {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #b3c0d1;
+}
+
+.card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.card-body h2 {
+    font-size: 1rem;
+}
+
+.card-body p {
+    flex: 1;
+    margin: 6px 0 16px;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+.card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--linea);
+}
+
+.tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--acento);
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--acento);
+    border-radius: 6px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    color: #ffffff;
+    background-color: var(--acento);
+}
+
+/* ---------- 5. Ajustes por ancho de ventana ---------- */
+@media (max-width: 760px) {
+    .site-header {
+        justify-content: center;
+    }
+
+    .site-nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* ---------- 6. Pie ---------- */
+.site-footer {
+    padding: 24px;
+    background-color: var(--superficie);
+    border-top: 1px solid var(--linea);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+}
