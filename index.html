@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIW · Índice de ejercicios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Header con Flexbox -->
+    <header class="site-header">
+        <a class="logo" href="index.html">DIW<span>.</span></a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+            <a href="index.html" class="is-active">Inicio</a>
+            <a href="#ejercicios">Ejercicios</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+    </header>
+
+    <main class="page" id="ejercicios">
+
+        <!-- 2. Cabecera del repositorio -->
+        <header class="page-head">
+            <p class="eyebrow">Diseño de Interfaces Web</p>
+            <h1>Índice de ejercicios</h1>
+            <p class="lead">Repositorio de prácticas y maquetación del módulo de DIW.</p>
+        </header>
+
+        <!-- 3. Contenedor flex con las tarjetas de los ejercicios -->
+        <section class="exercises" aria-label="Listado de ejercicios">
+
+            <article class="card">
+                <div class="card-media" aria-hidden="true"><span>C1</span></div>
+                <div class="card-body">
+                    <h2>Header con Flexbox</h2>
+                    <p>Maquetación de cabecera con logo y barra de navegación alineados con Flexbox.</p>
+                    <div class="card-foot">
+                        <span class="tag">Flexbox</span>
+                        <a class="btn" href="c1.html">Ver ejercicio</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-media" aria-hidden="true"><span>C2</span></div>
+                <div class="card-body">
+                    <h2>Tarjetas con Flex-wrap</h2>
+                    <p>Catálogo de doce tarjetas del mismo tamaño que se reorganizan al reducir la ventana.</p>
+                    <div class="card-foot">
+                        <span class="tag">Responsive</span>
+                        <a class="btn" href="c2.html">Ver ejercicio</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-media" aria-hidden="true"><span>C3</span></div>
+                <div class="card-body">
+                    <h2>Página completa con Grid</h2>
+                    <p>Estructura completa usando CSS Grid con cabecera, barra lateral de 250 px, contenido y pie.</p>
+                    <div class="card-foot">
+                        <span class="tag">CSS Grid</span>
+                        <a class="btn" href="c3.html">Ver ejercicio</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- PLANTILLA PARA PRÓXIMOS EJERCICIOS:
+            <article class="card">
+                <div class="card-media" aria-hidden="true"><span>C4</span></div>
+                <div class="card-body">
+                    <h2>Título del ejercicio</h2>
+                    <p>Descripción breve de lo que se practica en este ejercicio.</p>
+                    <div class="card-foot">
+                        <span class="tag">Tema</span>
+                        <a class="btn" href="c4.html">Ver ejercicio</a>
+                    </div>
+                </div>
+            </article>
+            -->
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 · Repositorio de ejercicios — Módulo DIW</p>
+    </footer>
+
+</body>
+</html>
